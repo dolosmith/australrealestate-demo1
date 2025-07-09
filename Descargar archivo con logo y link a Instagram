@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+<style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+<style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet"/>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css" rel="stylesheet"/>
+<meta content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<style>
+                #map_9e639db72c9a18e2b5b06933bbc3cc53 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css" rel="stylesheet"/>
+</head>
+<body>
+<div style="position: fixed; top: 10px; right: 10px; z-index: 9999; background-color: white; padding: 5px; border-radius: 4px;">
+<a href="https://www.instagram.com/australrealestate" target="_blank">
+<img alt="Austral Logo" src="https://raw.githubusercontent.com/OpenAI-User-Assets/austral-assets/main/Austral-logo.png" style="height: 40px;"/>
+</a>
+</div>
+
+<div class="folium-map" id="map_9e639db72c9a18e2b5b06933bbc3cc53"></div>
+</body>
+<script>
+    
+    
+            var map_9e639db72c9a18e2b5b06933bbc3cc53 = L.map(
+                "map_9e639db72c9a18e2b5b06933bbc3cc53",
+                {
+                    center: [-40.7611, -71.6461],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ad1388405a36bbe48db9c00521a75624 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_9e639db72c9a18e2b5b06933bbc3cc53);
+        
+    
+            var marker_cluster_bf56ea64852f03814fab732db30b3e7a = L.markerClusterGroup(
+                {}
+            );
+            map_9e639db72c9a18e2b5b06933bbc3cc53.addLayer(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var marker_5f19bb54a1242656d0277baca2cc3f66 = L.marker(
+                [-40.7611, -71.6461],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_8f4534d1473c2c068ed7b9c2018897d7 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$350,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_5f19bb54a1242656d0277baca2cc3f66.setIcon(div_icon_8f4534d1473c2c068ed7b9c2018897d7);
+        
+    
+        var popup_fb48d213e0a703cc34cf8120fa1e6e33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8d04952e89c71dbcbe2d0a97cdf8048c = $(`<div id="html_8d04952e89c71dbcbe2d0a97cdf8048c" style="width: 100.0%; height: 100.0%;">Barrio Cumelen<br>USD 350,000</div>`)[0];
+            popup_fb48d213e0a703cc34cf8120fa1e6e33.setContent(html_8d04952e89c71dbcbe2d0a97cdf8048c);
+        
+
+        marker_5f19bb54a1242656d0277baca2cc3f66.bindPopup(popup_fb48d213e0a703cc34cf8120fa1e6e33)
+        ;
+
+        
+    
+    
+            marker_5f19bb54a1242656d0277baca2cc3f66.bindTooltip(
+                `<div>
+                     USD 350,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1e0df8dc6c429f7cc7dc3934de3a7174 = L.marker(
+                [-40.7511, -71.6461],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_eac62b611cae7dfe852284af0ea94ef0 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$1,400,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_1e0df8dc6c429f7cc7dc3934de3a7174.setIcon(div_icon_eac62b611cae7dfe852284af0ea94ef0);
+        
+    
+        var popup_4e108b87de0e6177fd83b6cc76356361 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_21f71dd82529c7205212646c4c46ce81 = $(`<div id="html_21f71dd82529c7205212646c4c46ce81" style="width: 100.0%; height: 100.0%;">Barrio Muelle de Piedra<br>USD 1,400,000</div>`)[0];
+            popup_4e108b87de0e6177fd83b6cc76356361.setContent(html_21f71dd82529c7205212646c4c46ce81);
+        
+
+        marker_1e0df8dc6c429f7cc7dc3934de3a7174.bindPopup(popup_4e108b87de0e6177fd83b6cc76356361)
+        ;
+
+        
+    
+    
+            marker_1e0df8dc6c429f7cc7dc3934de3a7174.bindTooltip(
+                `<div>
+                     USD 1,400,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aa67be3d170f4b134a1b1bbc923da068 = L.marker(
+                [-40.741099999999996, -71.6461],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_1ac0ff22846ff9ff1c231dcf4b5df8af = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$250,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_aa67be3d170f4b134a1b1bbc923da068.setIcon(div_icon_1ac0ff22846ff9ff1c231dcf4b5df8af);
+        
+    
+        var popup_c00dd25ed0d78e80a2c38a8ad35c288b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ac32693815ee8b15af74ad4f5e923f67 = $(`<div id="html_ac32693815ee8b15af74ad4f5e923f67" style="width: 100.0%; height: 100.0%;">Manzano Bay View<br>USD 250,000</div>`)[0];
+            popup_c00dd25ed0d78e80a2c38a8ad35c288b.setContent(html_ac32693815ee8b15af74ad4f5e923f67);
+        
+
+        marker_aa67be3d170f4b134a1b1bbc923da068.bindPopup(popup_c00dd25ed0d78e80a2c38a8ad35c288b)
+        ;
+
+        
+    
+    
+            marker_aa67be3d170f4b134a1b1bbc923da068.bindTooltip(
+                `<div>
+                     USD 250,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c0610e29bff1d0b2be2809cf1b1b1c1 = L.marker(
+                [-40.7611, -71.6361],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_88ecbe1e0c658af26cf1bb5829f6f56c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$220,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_2c0610e29bff1d0b2be2809cf1b1b1c1.setIcon(div_icon_88ecbe1e0c658af26cf1bb5829f6f56c);
+        
+    
+        var popup_76e902a7649d582eccb100ec87ec32fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1c64cc43bf3065360501021dcc5e1e2 = $(`<div id="html_f1c64cc43bf3065360501021dcc5e1e2" style="width: 100.0%; height: 100.0%;">los nogales 10, bahía Manzano<br>USD 220,000</div>`)[0];
+            popup_76e902a7649d582eccb100ec87ec32fe.setContent(html_f1c64cc43bf3065360501021dcc5e1e2);
+        
+
+        marker_2c0610e29bff1d0b2be2809cf1b1b1c1.bindPopup(popup_76e902a7649d582eccb100ec87ec32fe)
+        ;
+
+        
+    
+    
+            marker_2c0610e29bff1d0b2be2809cf1b1b1c1.bindTooltip(
+                `<div>
+                     USD 220,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b329c77b0196793047fd1c68651830da = L.marker(
+                [-40.7511, -71.6361],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_06ca482d7a6244c23451135508f52716 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$45,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_b329c77b0196793047fd1c68651830da.setIcon(div_icon_06ca482d7a6244c23451135508f52716);
+        
+    
+        var popup_5da0d13198b9a2f4bda81b1fb0434e56 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c3477ef6b15ced734b4672064825d9e9 = $(`<div id="html_c3477ef6b15ced734b4672064825d9e9" style="width: 100.0%; height: 100.0%;">boulevard Quetrihue 200<br>USD 45,000</div>`)[0];
+            popup_5da0d13198b9a2f4bda81b1fb0434e56.setContent(html_c3477ef6b15ced734b4672064825d9e9);
+        
+
+        marker_b329c77b0196793047fd1c68651830da.bindPopup(popup_5da0d13198b9a2f4bda81b1fb0434e56)
+        ;
+
+        
+    
+    
+            marker_b329c77b0196793047fd1c68651830da.bindTooltip(
+                `<div>
+                     USD 45,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ed6642e357b4870e20779092b0ace821 = L.marker(
+                [-40.741099999999996, -71.6361],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_4fab5bc15897bf2cf8459c3f7ec05871 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$250,009\u003c/b\u003e\u003c/div\u003e"});
+            marker_ed6642e357b4870e20779092b0ace821.setIcon(div_icon_4fab5bc15897bf2cf8459c3f7ec05871);
+        
+    
+        var popup_ebefaa1824fca342cd1cc7a8a303f5c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0d0ae6e3ea822282eb644c0146f55f73 = $(`<div id="html_0d0ae6e3ea822282eb644c0146f55f73" style="width: 100.0%; height: 100.0%;">osa mayor 25<br>USD 250,009</div>`)[0];
+            popup_ebefaa1824fca342cd1cc7a8a303f5c1.setContent(html_0d0ae6e3ea822282eb644c0146f55f73);
+        
+
+        marker_ed6642e357b4870e20779092b0ace821.bindPopup(popup_ebefaa1824fca342cd1cc7a8a303f5c1)
+        ;
+
+        
+    
+    
+            marker_ed6642e357b4870e20779092b0ace821.bindTooltip(
+                `<div>
+                     USD 250,009
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc93284a9fce973781c1094ab0d603f3 = L.marker(
+                [-40.7611, -71.62610000000001],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_16d372a5e0d6ca8e0c9258186b09c61e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$220,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_cc93284a9fce973781c1094ab0d603f3.setIcon(div_icon_16d372a5e0d6ca8e0c9258186b09c61e);
+        
+    
+        var popup_75d3a0a403ed2a190a19688aac7ccaf3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e8d9a19daeef8b23c1bd7453a39da14e = $(`<div id="html_e8d9a19daeef8b23c1bd7453a39da14e" style="width: 100.0%; height: 100.0%;">boulevard pascotto 211<br>USD 220,000</div>`)[0];
+            popup_75d3a0a403ed2a190a19688aac7ccaf3.setContent(html_e8d9a19daeef8b23c1bd7453a39da14e);
+        
+
+        marker_cc93284a9fce973781c1094ab0d603f3.bindPopup(popup_75d3a0a403ed2a190a19688aac7ccaf3)
+        ;
+
+        
+    
+    
+            marker_cc93284a9fce973781c1094ab0d603f3.bindTooltip(
+                `<div>
+                     USD 220,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_77e4eae8c5f370057c9dab82a914c094 = L.marker(
+                [-40.7511, -71.62610000000001],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_a8457c6cd4881bd8928baf76381c130b = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$150,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_77e4eae8c5f370057c9dab82a914c094.setIcon(div_icon_a8457c6cd4881bd8928baf76381c130b);
+        
+    
+        var popup_31b8907fa8db684c6161fa3a3592f3ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_847be393ba2afce9cd71306a7fbced94 = $(`<div id="html_847be393ba2afce9cd71306a7fbced94" style="width: 100.0%; height: 100.0%;">calle 27 loteo Vizion<br>USD 150,000</div>`)[0];
+            popup_31b8907fa8db684c6161fa3a3592f3ab.setContent(html_847be393ba2afce9cd71306a7fbced94);
+        
+
+        marker_77e4eae8c5f370057c9dab82a914c094.bindPopup(popup_31b8907fa8db684c6161fa3a3592f3ab)
+        ;
+
+        
+    
+    
+            marker_77e4eae8c5f370057c9dab82a914c094.bindTooltip(
+                `<div>
+                     USD 150,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cdc4d12d02d220bb12ae1539e8b87cfa = L.marker(
+                [-40.741099999999996, -71.62610000000001],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_518f854b2af413c33853160f490c5e65 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$85,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_cdc4d12d02d220bb12ae1539e8b87cfa.setIcon(div_icon_518f854b2af413c33853160f490c5e65);
+        
+    
+        var popup_70edc07b4c55c24cc708dc67e3735da6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8a2a1f0a0e491b707dd4a1448917137 = $(`<div id="html_d8a2a1f0a0e491b707dd4a1448917137" style="width: 100.0%; height: 100.0%;">moquehue 89<br>USD 85,000</div>`)[0];
+            popup_70edc07b4c55c24cc708dc67e3735da6.setContent(html_d8a2a1f0a0e491b707dd4a1448917137);
+        
+
+        marker_cdc4d12d02d220bb12ae1539e8b87cfa.bindPopup(popup_70edc07b4c55c24cc708dc67e3735da6)
+        ;
+
+        
+    
+    
+            marker_cdc4d12d02d220bb12ae1539e8b87cfa.bindTooltip(
+                `<div>
+                     USD 85,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_930094edda84704a75a5eb28926de0a6 = L.marker(
+                [-40.7611, -71.6161],
+                {}
+            ).addTo(marker_cluster_bf56ea64852f03814fab732db30b3e7a);
+        
+    
+            var div_icon_5d73975932fbb77ef095d34477be6f3c = L.divIcon({"className": "empty", "html": "\u003cdiv style=\"font-size: 14px; color: black;\"\u003e\u003cb\u003e$550,000\u003c/b\u003e\u003c/div\u003e"});
+            marker_930094edda84704a75a5eb28926de0a6.setIcon(div_icon_5d73975932fbb77ef095d34477be6f3c);
+        
+    
+        var popup_c3b8dcc01b4ec42a63852292d1713247 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_95969166019f555566a6fc63a9834997 = $(`<div id="html_95969166019f555566a6fc63a9834997" style="width: 100.0%; height: 100.0%;">muelle de piedra<br>USD 550,000</div>`)[0];
+            popup_c3b8dcc01b4ec42a63852292d1713247.setContent(html_95969166019f555566a6fc63a9834997);
+        
+
+        marker_930094edda84704a75a5eb28926de0a6.bindPopup(popup_c3b8dcc01b4ec42a63852292d1713247)
+        ;
+
+        
+    
+    
+            marker_930094edda84704a75a5eb28926de0a6.bindTooltip(
+                `<div>
+                     USD 550,000
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
